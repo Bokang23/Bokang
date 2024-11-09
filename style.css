@@ -1,0 +1,520 @@
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, 'Poppins';
+    line-height: 1.6;
+    background-color: #f0f4f8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100vh;
+    margin: 0;
+    background-image: url('p.JPG');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.my-class {
+    background-image: url('report.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+/* Headings */
+h1 {
+    color: black;
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
+    font-size: 1.8em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Container styles */
+.container {
+    width: 80%;
+    max-width: 800px;
+    max-height: 90vh; /* Limit the height to allow scrolling */
+    overflow-y: auto; /* Enable vertical scrolling */
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+.container:hover:before, .container:hover:after {
+    opacity: 1;
+}
+
+/* Register container */
+.register-container {
+    height: auto;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 30px 40px;
+    border-radius: 15px;
+    box-shadow: 0 6px 30px rgba(0, 0, 0, 0.15);
+    max-width: 50%;
+    transition: all 0.3s ease;
+}
+
+/* Login container */
+.login-container {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 40px 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    max-width: 400px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+
+
+/* Flashing light orbs */
+.flashing-light {
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    background-color: #fff;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+    animation: flash 1s infinite;
+}
+
+.flashing-light:nth-child(1) { top: 10%; left: 10%; animation-delay: 0.5s; }
+.flashing-light:nth-child(2) { top: 20%; right: 15%; animation-delay: 1s; }
+.flashing-light:nth-child(3) { bottom: 10%; left: 20%; animation-delay: 1.5s; }
+.flashing-light:nth-child(4) { bottom: 20%; right: 5%; animation-delay: 2s; }
+.flashing-light:nth-child(5) { top: 5%; left: 25%; animation-delay: 2.5s; }
+
+/* Form styles */
+.form-container {
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+form {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    flex: 1 1 calc(48% - 20px);
+    min-width: 300px;
+    margin-bottom: 20px;
+}
+
+/* Input styles */
+input[type="text"], input[type="password"], input[type="number"], input[type="email"], select {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border 0.3s;
+}
+
+input:focus, select:focus {
+    border-color: #1a73e8;
+    outline: none;
+}
+
+/* Button styles */
+button {
+    padding: 15px;
+    background-color: #1a73e8;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background-color: #1559b3;
+    transform: scale(1.05);
+}
+
+/* Utility Button */
+.btn {
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    background-color: #28a745;
+    padding: 15px 25px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    margin: 10px;
+    font-size: 1.1em;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.login-btn {
+    display: inline-block; /* Allow for block-level styling */
+    text-decoration: none; /* Remove underline from links */
+    color: white; /* Text color */
+    background-color: #28a745; /* Green background color */
+    padding: 15px 25px; /* Padding for the button */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s, transform 0.2s; /* Smooth transition for background and transform */
+    margin: 10px; /* Margin around the button */
+    font-size: 1.1em; /* Font size */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.login-btn:hover {
+    background-color: #218838; /* Darker shade of green on hover */
+    transform: translateY(-2px); /* Slight lift effect on hover */
+}
+
+.login-btn:active {
+    transform: translateY(0); /* Reset position on click */
+    background-color: #1e7e34; /* Even darker shade on active */
+}
+.register-btn {
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    background-color: #6c63ff; /* Adjust this color to match your design */
+    padding: 15px 25px;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.2s;
+    margin: 10px;
+    font-size: 1.1em;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.register-btn:hover {
+    background-color: #5a54e0; /* Darker shade on hover */
+    transform: translateY(-2px); /* Lift effect */
+}
+
+.register-btn:active {
+    transform: translateY(0);
+    background-color: #4b4bd4; /* Even darker shade on active */
+}
+
+
+
+
+
+
+
+
+.btn:hover {
+    background-color: #5a54e0;
+}
+/* Buttons styling */
+.submit-btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.submit-btn:hover {
+    background-color: #45a049;
+}
+
+
+/* Error and success message box styling */
+.error-message {
+    border: 1px solid #f5c6cb;
+    padding: 12px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    font-size: 15px;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.success-message {
+    color: #155724;
+    border: 1px solid #c3e6cb;
+    padding: 15px;
+    margin: 20px 0;
+    border-radius: 5px;
+}
+
+/* Paragraph and link styles */
+p {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+
+/* Inner glowing effect */
+@keyframes flash {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+/* Navigation Links */
+nav {
+    margin-top: 20px;
+    text-align: right;
+}
+.nav-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.nav-links a {
+    padding: 12px 25px;
+    background-color: #6c63ff;
+    color: #fff;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1em;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.nav-links a:hover {
+    background-color: #5a54e0;
+    transform: scale(1.05);
+}
+
+.nav-links a:active {
+    background-color: #483fd4;
+    transform: scale(0.95);
+}
+
+/* Logout button */
+.logout-btn {
+    background-color: #ff5e57;
+    color: white;
+    padding: 8px 12px;
+    text-decoration: none;
+    border-radius: 4px;
+    margin-left: 10px;
+    font-size: 0.9em;
+}
+
+.logout-btn:hover {
+    background-color: #ff3b30;
+}
+
+
+.logout-btn:active {
+    background-color: #e63939;
+    transform: scale(0.95);
+}
+/* Form and group styling */
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    font-weight: bold;
+    color: #555;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input[type="text"],
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+/* Message box styling */
+.message {
+    background-color: #e0ffe0;
+    color: #4CAF50;
+    padding: 10px;
+    border: 1px solid #4CAF50;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+/* Select All checkbox */
+.select-all {
+    display: inline-block;
+    margin-top: 5px;
+    padding: 5px 10px;
+    background-color: #007BFF;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 0.9em;
+}
+
+.select-all:hover {
+    background-color: #0056b3;
+}
+
+/* Student checkboxes styling */
+.form-group label input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+
+
+
+
+
+
+
+/* Style for the form container */
+form {
+    max-width: 600px; /* Maximum width for the form */
+    max-height: 500px; /* Maximum height for the form */
+    margin: 0 auto; /* Center the form on the page */
+    padding: 30px 40px; /* Padding around the form */
+    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent background */
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 6px 30px rgba(0, 0, 0, 0.15); /* Subtle shadow for depth */
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+    overflow-y: auto; /* Enable vertical scrolling */
+    overflow-x: hidden; /* Hide horizontal overflow */
+}
+
+/* Style for inputs */
+form input[type="text"],
+form input[type="email"],
+form input[type="password"],
+form select {
+    width: 100%; /* Full width */
+    padding: 12px; /* Padding inside inputs */
+    margin-bottom: 15px; /* Space below each input */
+    border: 1px solid #ccc; /* Border color */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 1em; /* Font size for inputs */
+    transition: border-color 0.3s; /* Smooth transition for focus */
+}
+
+/* Focus effect for inputs */
+form input[type="text"]:focus,
+form input[type="email"]:focus,
+form input[type="password"]:focus,
+form select:focus {
+    border-color: #6c63ff; /* Change border color on focus */
+    outline: none; /* Remove default outline */
+}
+
+/* Style for the gender selection */
+.gender-selection {
+    margin-bottom: 15px; /* Space below the gender selection */
+}
+
+/* Style for the button */
+form button {
+    width: 100%; /* Full width button */
+    padding: 15px; /* Padding inside button */
+    background-color: #6c63ff; /* Button color */
+    color: white; /* Text color */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 1.1em; /* Font size */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s, transform 0.2s; /* Smooth transition */
+}
+
+/* Hover effect for button */
+form button:hover {
+    background-color: #5a54e0; /* Darker shade on hover */
+    transform: translateY(-2px); /* Lift effect */
+}
+
+/* Style for the paragraph at the bottom */
+form p {
+    margin-top: 20px; /* Space above the paragraph */
+    text-align: center; /* Center the text */
+}
+
+form p a {
+    color: #28a745; /* Link color */
+    text-decoration: none; /* Remove underline from link */
+}
+
+form p a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+/* Style for the heading */
+h2 {
+    text-align: center; /* Center the heading */
+    margin-bottom: 20px; /* Space below the heading */
+}
+
+
+
+
+.green-text {
+    color: green; /* Change the color to green */
+    text-decoration: none; /* Remove underline */
+    font-weight: bold; /* Optional: make text bold */
+}
+
+.green-text:hover {
+    text-decoration: underline; /* Optional: underline on hover */
+}
+
+
+
+
+
+
+
+.green-button {
+    background-color: green; /* Set background color to green */
+    color: white; /* Set text color to white */
+    border: none; /* Remove default border */
+    padding: 10px 15px; /* Add some padding */
+    border-radius: 5px; /* Make the corners round */
+    font-size: 16px; /* Set font size */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    transition: background-color 0.3s; /* Smooth transition for background color */
+}
+
+.green-button:hover {
+    background-color: darkgreen; /* Darken the button on hover */
+}
